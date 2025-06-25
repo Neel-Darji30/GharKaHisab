@@ -1,0 +1,154 @@
+/* Base reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #c0f0d0, #6b8ca0);
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Main container */
+.container {
+  flex: 1;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Header */
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #1a3d2f;
+}
+
+h2 {
+  font-size: 22px;
+  color: #1a3d2f;
+}
+
+/* Wrapper for forms */
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* Card styling */
+.card {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  backdrop-filter: blur(6px);
+}
+
+/* Card title */
+.card h3 {
+  color: #236b34;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="number"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(46, 125, 50, 0.6);
+  background-color: #f0fff4;
+}
+
+/* Buttons */
+button,
+input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #256428;
+}
+
+/* Navigation links */
+.links {
+  margin-top: 30px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #1a3d2f;
+  margin: 0 10px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.links a:hover {
+  text-decoration: underline;
+  color: #0d3521;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 14px;
+  color: #1a3d2f;
+  background: transparent;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .form-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
